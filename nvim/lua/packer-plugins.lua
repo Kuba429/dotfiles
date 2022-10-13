@@ -1,5 +1,14 @@
 return require("packer").startup(function()
 	use 'wbthomason/packer.nvim'
+
+	--use {'neoclide/coc.nvim', branch = 'release'}
+	-- LSP
+	use 'neovim/nvim-lspconfig'
+	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+	use 'L3MON4D3/LuaSnip' -- Snippets plugin
+
 	use {
 		"folke/which-key.nvim",
 		config = function()
@@ -10,7 +19,6 @@ return require("packer").startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-	use {'neoclide/coc.nvim', branch = 'release'}
 	use 'terryma/vim-multiple-cursors'
 	use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 	use({

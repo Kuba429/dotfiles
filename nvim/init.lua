@@ -2,12 +2,14 @@ require("keybindings")
 require("packer-plugins")
 require("tree")
 require("treesitter")
+require("lsp")
 vim.o.relativenumber = true
 
 vim.cmd("colorscheme minimal")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
 vim.cmd("hi CocFloating guibg=#262627")
+vim.cmd("set clipboard=unnamedplus")
 
 vim.o.ls = 0
 vim.o.ch = 0
