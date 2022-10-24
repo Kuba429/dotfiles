@@ -10,3 +10,5 @@ map("n", "<C-p>", ":FzfLua files<Cr>")
 map("n", "<C-S-p>", ":FzfLua<Cr>")
 map("n", "<C-b>", ":NvimTreeToggle<Cr>")
 map("n", "<C-S-f>", ":FzfLua grep<Cr>")
+map("n", "y", '"+y')
+

@@ -1,3 +1,5 @@
+vim.opt.termguicolors = true
+require( 'colorizer' ).setup()
 require("keybindings")
 require("packer-plugins")
 require("tree")
@@ -8,8 +10,10 @@ vim.o.relativenumber = true
 vim.cmd("colorscheme minimal")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
-vim.cmd("hi CocFloating guibg=#262627")
-vim.cmd("set clipboard=unnamedplus")
+vim.cmd("hi Pmenu guibg=#191919")
+vim.cmd("hi PmenuSel guibg=#202020")
+vim.cmd("hi PmenuThumb guibg=#cfd0d7")
+
 
 vim.o.ls = 0
 vim.o.ch = 0

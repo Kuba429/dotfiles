@@ -9,6 +9,7 @@ return require("packer").startup(function()
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
+
 	use {
 		"folke/which-key.nvim",
 		config = function()
@@ -30,7 +31,7 @@ return require("packer").startup(function()
 			})
 		end
 	})
-	use 'm4xshen/autoclose.nvim'
+	use "jiangmiao/auto-pairs"
 	use {
 		'kyazdani42/nvim-tree.lua',
 		requires = {
@@ -43,6 +44,7 @@ return require("packer").startup(function()
 	use 'pangloss/vim-javascript'
 	use { 'evanleck/vim-svelte', branch= 'main' }
 	use 'fatih/vim-go'
+	use 'norcalli/nvim-colorizer.lua'
 	--themes
 	use { 
 		'olivercederborg/poimandres.nvim',
@@ -65,7 +67,6 @@ return require("packer").startup(function()
 
 
 end)
-
 
 
 
