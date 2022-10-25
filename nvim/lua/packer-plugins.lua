@@ -59,11 +59,10 @@ return require("packer").startup(function()
 	use 'Mofiqul/vscode.nvim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 	use 'bluz71/vim-moonfly-colors'
-	use 'B4mbus/oxocarbon-lua.nvim'
-	--	use 'Yazeed1s/minimal.nvim'
+	use 'marko-cerovac/material.nvim'
+	use 'tanvirtin/monokai.nvim'
+	use 'folke/tokyonight.nvim'
 	use 'Kuba429/minimal.nvim'
-
-
 
 
 end)
