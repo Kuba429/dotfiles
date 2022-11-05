@@ -20,8 +20,10 @@ return require("packer").startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-	use 'terryma/vim-multiple-cursors'
-	use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -63,8 +65,15 @@ return require("packer").startup(function()
 	use 'tanvirtin/monokai.nvim'
 	use 'folke/tokyonight.nvim'
 	use 'Kuba429/minimal.nvim'
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		config = function()
+			vim.cmd('colorscheme rose-pine')
+		end
+	})
 
-
+	use 'frenzyexists/aquarium-vim'
 end)
 
 

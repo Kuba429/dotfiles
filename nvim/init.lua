@@ -11,9 +11,11 @@ vim.cmd("colorscheme tokyonight-night") -- for some reason treesitter highlighti
 vim.cmd("colorscheme monokai_pro")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
-vim.cmd("hi Pmenu guibg=#191919")
-vim.cmd("hi PmenuSel guibg=#202020")
-vim.cmd("hi PmenuThumb guibg=#cfd0d7")
+vim.cmd("hi NvimTreeNormal guibg=NONE")
+vim.cmd("hi Pmenu guibg=#2b232b")
+--vim.cmd("hi PmenuSel guibg=#202020")
+--vim.cmd("hi PmenuThumb guibg=#cfd0d7")
+vim.cmd("hi TelescopeNormal guibg=NONE")
 
 
 

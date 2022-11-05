@@ -6,9 +6,9 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map("n", "<C-p>", ":FzfLua files<Cr>")
-map("n", "<C-S-p>", ":FzfLua<Cr>")
+map("n", "<C-p>", ":Telescope find_files<Cr>")
+map("n", "<C-S-p>", ":Telescope<Cr>")
 map("n", "<C-b>", ":NvimTreeToggle<Cr>")
-map("n", "<C-S-f>", ":FzfLua grep<Cr>")
+map("n", "<C-S-f>", ":Telescope live_grep<Cr>")
 map("n", "y", '"+y')
-
+map("n", "<Cr>", ":noh<Cr>")
