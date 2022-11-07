@@ -43,6 +43,7 @@ return require("packer").startup(function()
 	use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
 	use 'mattn/emmet-vim'
 	use 'othree/html5.vim'
+	use 'pantharshit00/vim-prisma'
 	use 'pangloss/vim-javascript'
 	use { 'evanleck/vim-svelte', branch= 'main' }
 	use 'fatih/vim-go'
