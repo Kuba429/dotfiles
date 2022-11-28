@@ -50,7 +50,7 @@ local lspconfig = require('lspconfig')
 
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals' }
+local servers = { 'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		on_attach = on_attach,
@@ -58,6 +58,10 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 end
+
+require'lspconfig'.elixirls.setup{
+    cmd = { "/Users/kuba/.elixir-ls/language_server.sh" };
+}
 
 -- luasnip setup
 local luasnip = require 'luasnip'
