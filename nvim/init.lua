@@ -7,7 +7,7 @@ require("tree")
 require("lsp")
 
 vim.cmd("colorscheme tokyonight-night") -- for some reason treesitter highlighting doesn't work properly in some files (svelte, vue) and setting colorscheme to tokyo fixes it. Idk what's that about 🤷
-vim.cmd("colorscheme monokai")
+vim.cmd("colorscheme monokai_ristretto")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
 vim.cmd("hi NvimTreeNormal guibg=NONE")
@@ -20,11 +20,13 @@ vim.cmd("hi TabLine guibg=#2e2e2e")
 vim.cmd("hi TabLineFill guibg=NONE")
 vim.cmd("hi TabLineSel guibg=NONE")
 vim.cmd("hi Visual guibg=#27292c")
+vim.cmd("hi FloatBorder guibg=ffffff")
+vim.cmd("hi NormalFloat guibg=NONE")
 
 
 
 --vim.g.material_style = "darker"
-vim.o.ls = 0
+--vim.o.ls = 0
 vim.o.ch = 0
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
@@ -40,3 +42,4 @@ let g:vim_svelte_plugin_use_typescript = 1
 let g:vim_svelte_plugin_use_sass = 1
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.jsx,*.tsx,*.json PrettierAsync
 ]])
+

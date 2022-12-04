@@ -8,7 +8,18 @@ return require("packer").startup(function()
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin
-
+	-- Lua
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			}
+		end
+	}
 
 	use {
 		"folke/which-key.nvim",
@@ -56,26 +67,20 @@ return require("packer").startup(function()
 			}
 		end
 	}
-	use "sainnhe/sonokai"
-	use 'dikiaap/minimalist'
-	use 'jacoborus/tender.vim'
+	use {
+		'meliora-theme/neovim',
+		requires = {'rktjmp/lush.nvim'}
+	}
 	use 'Mofiqul/vscode.nvim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
-	use 'bluz71/vim-moonfly-colors'
-	use 'marko-cerovac/material.nvim'
 	use 'tanvirtin/monokai.nvim'
 	use 'folke/tokyonight.nvim'
 	use 'Kuba429/minimal.nvim'
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
-
-	use 'frenzyexists/aquarium-vim'
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use "rebelot/kanagawa.nvim"
+	use { "catppuccin/nvim", as = "catppuccin" }
+	use 'yashguptaz/calvera-dark.nvim'
+	use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 end)
-
 
 
