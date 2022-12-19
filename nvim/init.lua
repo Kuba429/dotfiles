@@ -26,7 +26,7 @@ vim.cmd("hi NormalFloat guibg=NONE")
 
 
 --vim.g.material_style = "darker"
---vim.o.ls = 0
+vim.o.ls = 0
 vim.o.ch = 0
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
@@ -40,6 +40,6 @@ let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:vim_svelte_plugin_use_typescript = 1                                  
 let g:vim_svelte_plugin_use_sass = 1
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.jsx,*.tsx,*.json PrettierAsync
+au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.jsx,*.tsx,*.astro,*.json PrettierAsync
 ]])
 

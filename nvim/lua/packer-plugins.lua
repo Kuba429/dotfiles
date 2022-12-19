@@ -55,6 +55,8 @@ return require("packer").startup(function()
 	use 'mattn/emmet-vim'
 	use 'othree/html5.vim'
 	use 'pantharshit00/vim-prisma'
+	use 'jxnblk/vim-mdx-js'
+	use 'findango/vim-mdx'
 	use 'pangloss/vim-javascript'
 	use { 'evanleck/vim-svelte', branch= 'main' }
 	use 'fatih/vim-go'
