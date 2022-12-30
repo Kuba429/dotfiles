@@ -15,3 +15,6 @@ map("n", "<Cr>", ":noh<Cr>")
 map("n", "<space-f>", ":lua vim.lsp.buf.formatting()")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)

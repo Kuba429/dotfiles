@@ -43,3 +43,7 @@ let g:vim_svelte_plugin_use_sass = 1
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.jsx,*.tsx,*.astro,*.json PrettierAsync
 ]])
 
+vim.cmd([[
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
+]])
