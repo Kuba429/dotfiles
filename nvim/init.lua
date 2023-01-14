@@ -34,6 +34,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff=8
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 vim.wo.number = true	
 vim.cmd([[
 let g:prettier#autoformat = 1
