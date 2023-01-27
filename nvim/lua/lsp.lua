@@ -6,7 +6,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -39,7 +39,7 @@ local lspconfig = require('lspconfig')
 
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-	width = 80,
+	--width = 30,
 	border = 'rounded',
 })
 
@@ -63,12 +63,21 @@ require'lspconfig'.elixirls.setup{
 	cmd = { "/Users/kuba/.elixir-ls/language_server.sh" };
 }
 
+require'lspconfig'.sumneko_lua.setup{
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { 'vim' }
+			}
+		}
+	}
+}
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
-
 cmp.setup {
 	snippet = {
 		expand = function(args)
@@ -76,10 +85,7 @@ cmp.setup {
 		end,
 	},
 	window = {
-		completion = {
-			border = 'rounded',
-		},
-		--completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered()
 		},
 		mapping = cmp.mapping.preset.insert({
@@ -113,7 +119,10 @@ cmp.setup {
 			{ name = 'nvim_lsp' },
 			{ name = 'luasnip' },
 		},
-		--	view = {
+		--		formatting = {
+			--			fields = {"abbr"}
+			--		},
+			--	view = {
 			--		entries = "native"
 			--	}
 		}
