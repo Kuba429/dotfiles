@@ -36,6 +36,7 @@ return require("packer").startup(function()
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -64,26 +65,27 @@ return require("packer").startup(function()
 	use 'norcalli/nvim-colorizer.lua'
 	--themes
 	use 'https://github.com/RRethy/nvim-base16'
-	use { 
-		'olivercederborg/poimandres.nvim',
+	use 'AlexvZyl/nordic.nvim'
+	use({
+		'ramojus/mellifluous.nvim',
+		requires = { 'rktjmp/lush.nvim' },
 		config = function()
-			require('poimandres').setup {
-			}
-		end
-	}
+			require'mellifluous'.setup({ --[[...]] }) -- optional, see configuration section.
+			vim.cmd('colorscheme mellifluous')
+		end,
+	})
 	use {
 		'meliora-theme/neovim',
 		requires = {'rktjmp/lush.nvim'}
 	}
+	use 'sainnhe/sonokai'
 	use 'Mofiqul/vscode.nvim'
+	use 'jacoborus/tender.vim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 	use 'tanvirtin/monokai.nvim'
 	use 'folke/tokyonight.nvim'
-	use 'Kuba429/minimal.nvim'
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
-	use "rebelot/kanagawa.nvim"
 	use { "catppuccin/nvim", as = "catppuccin" }
-	use 'yashguptaz/calvera-dark.nvim'
 	use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 end)
 
