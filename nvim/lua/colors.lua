@@ -17,3 +17,4 @@ vim.cmd("hi PmenuThumb guibg=#cfd0d7")
 vim.cmd([[
 let g:sonokai_style = 'atlantis'
 ]])
+

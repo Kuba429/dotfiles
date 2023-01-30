@@ -64,6 +64,7 @@ return require("packer").startup(function()
 	use 'fatih/vim-go'
 	use 'norcalli/nvim-colorizer.lua'
 	--themes
+	use 'tjdevries/colorbuddy.nvim'
 	use 'https://github.com/RRethy/nvim-base16'
 	use 'AlexvZyl/nordic.nvim'
 	use({
