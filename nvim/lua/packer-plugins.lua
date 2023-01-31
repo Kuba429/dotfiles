@@ -32,6 +32,7 @@ return require("packer").startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
+	use 'nvim-treesitter/playground'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -66,6 +67,7 @@ return require("packer").startup(function()
 	--themes
 	use 'tjdevries/colorbuddy.nvim'
 	use 'https://github.com/RRethy/nvim-base16'
+	use 'loctvl842/monokai-pro.nvim'
 	use 'AlexvZyl/nordic.nvim'
 	use({
 		'ramojus/mellifluous.nvim',
