@@ -56,8 +56,9 @@ Group.new("NonText", groups.normal, groups.normal, groups.normal)
 Group.new("EndOfBuffer", groups.LineNrAbove, groups.normal, groups.normal)
 Group.new("Visual", nil, colors.background:light(), nil)
 --Group.new("FloatBorder", nil, colors.foreground, nil) -- uncomment when using borders with lsp stuff
---Group.new("NvimTreeNormal", groups.normal, colors.background_comp, nil)
-
+Group.new("NvimTreeCursorLine", colors.foreground, colors.background:light(), nil)
+Group.new("NvimTreeNormal", colors.foreground, nil, nil)
+Group.new("NvimTreeFolderName", colors.foreground, nil, nil)
 vim.cmd([[
 hi Normal guibg=NONE
 ]])
