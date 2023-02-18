@@ -57,10 +57,14 @@ Group.new("LineNrBelow", colors.background:light(), nil, nil)
 --Group.new("LineNrAbove", colors.background_lighter, nil, nil)
 --Group.new("LineNrBelow", colors.background_lighter, nil, nil)
 
+Group.new("Pmenu", nil, colors.background:light(), nil)
 Group.new("Normal", colors.foreground, colors.background, nil)
 Group.new("NonText", groups.normal, groups.normal, groups.normal)
 Group.new("EndOfBuffer", groups.LineNrAbove, groups.normal, groups.normal)
 Group.new("Visual", nil, colors.background:light(), nil)
+
+Group.new("TabLine", nil, colors.background:light(), nil)
+Group.new("TabLineFill", nil, colors.background:light(), nil)
 --Group.new("FloatBorder", nil, colors.foreground, nil) -- uncomment when using borders with lsp stuff
 Group.new("NvimTreeCursorLine", colors.foreground, colors.background:light(), nil)
 Group.new("NvimTreeNormal", colors.foreground, nil, nil)
