@@ -40,11 +40,11 @@ local lspconfig = require('lspconfig')
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
 	--width = 30,
-	--border = 'rounded',
+	border = 'rounded',
 })
 
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signatureHelp, {
-	--border = 'rounded',
+	border = 'rounded',
 })
 
 
@@ -88,7 +88,7 @@ cmp.setup {
 		end,
 	},
 	window = {
-		--completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		--documentation = cmp.config.window.bordered(),
 		documentation = false
 	},

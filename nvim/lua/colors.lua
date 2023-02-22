@@ -3,10 +3,10 @@ source ~/.dotfiles/nvim/monokai_kuba.vim
 ]])
 local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
-Color.new('background',  '#1e1e1e')
-Color.new('background_lighter',  '#6f6f6f')
--- Color.new('background',  '#18191e')
--- Color.new('background_lighter', '#2f303a')
+-- Color.new('background',  '#1e1e1e')
+-- Color.new('background_lighter',  '#6f6f6f')
+Color.new('background',  '#18191e')
+Color.new('background_lighter', '#2f303a')
 Color.new('foreground',  '#FDFDFD')
 Color.new('red',         '#D84B82')
 Color.new('green',       '#D3F4AF')
@@ -54,8 +54,8 @@ Group.new("LineNr", colors.yellow, nil, styles.bold)
 
 Group.new("LineNrAbove", colors.background:light(), nil, nil)
 Group.new("LineNrBelow", colors.background:light(), nil, nil)
---Group.new("LineNrAbove", colors.background_lighter, nil, nil)
---Group.new("LineNrBelow", colors.background_lighter, nil, nil)
+-- Group.new("LineNrAbove", colors.background_lighter, nil, nil)
+-- Group.new("LineNrBelow", colors.background_lighter, nil, nil)
 
 Group.new("Pmenu", nil, colors.background:light(), nil)
 Group.new("Normal", colors.foreground, colors.background, nil)
@@ -65,12 +65,14 @@ Group.new("Visual", nil, colors.background:light(), nil)
 
 Group.new("TabLine", nil, colors.background:light(), nil)
 Group.new("TabLineFill", nil, colors.background:light(), nil)
---Group.new("FloatBorder", nil, colors.foreground, nil) -- uncomment when using borders with lsp stuff
+
+Group.new("FloatBorder", nil, colors.background, nil) -- uncomment when using borders with lsp stuff
+
 Group.new("NvimTreeCursorLine", colors.foreground, colors.background:light(), nil)
 Group.new("NvimTreeNormal", colors.foreground, nil, nil)
 Group.new("NvimTreeFolderName", colors.foreground, nil, nil)
 
-Group.new("SignColumn", nil, colors.background:light(), nil)
+Group.new("SignColumn", nil, colors.background, nil)
 Group.new("StatusLineNC", nil, colors.background:light(), nil)
 vim.cmd([[
 hi Normal guibg=NONE
