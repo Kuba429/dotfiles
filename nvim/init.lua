@@ -1,12 +1,12 @@
 vim.opt.termguicolors = true
 require("colorizer").setup()
+require("navigation")
 require("keybindings")
 require("treesitter")
 require("packer-plugins")
 require("tree")
 require("lsp")
 require("colors")
-
 
 vim.o.ls = 0
 vim.o.ch = 0
@@ -30,3 +30,4 @@ vim.cmd([[
 let g:autopep8_on_save = 1
 let g:autopep8_disable_show_diff=1
 ]])
+

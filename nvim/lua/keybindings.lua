@@ -14,6 +14,17 @@ map("n", "<Cr>", ":noh<Cr>")
 map("n", "<space-f>", ":lua vim.lsp.buf.formatting()")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-;>", ":execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>")
+-- harpoon
+map("n", "<C-m>", ":Telescope harpoon marks<CR>")
+map("n", "<C-h>m", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+map("n", "<C-h>a", ":lua require('harpoon.mark').add_file()<CR>")
+map("n", "<C-n>", ":lua require('harpoon.ui').nav_next()<CR>")
+map("n", "<C-S-n>", ":lua require('harpoon.ui').nav_prev()<CR>")
+map("n", "<C-h>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
+map("n", "<C-h>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
+map("n", "<C-h>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
+map("n", "<C-h>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )

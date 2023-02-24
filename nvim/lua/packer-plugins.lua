@@ -28,6 +28,7 @@ return require("packer").startup(function()
 			require("which-key").setup { }
 		end
 	}
+	use { "ThePrimeagen/harpoon", require={ "nvim-lua/plenary.nvim" } }
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
