@@ -1,7 +1,7 @@
 -- chaotic colorschemes
 if false then
 	vim.cmd([[
-	source ~/.dotfiles/nvim/monokai_kuba.vim
+	source ~/.dotfiles/nvim/themes/monokai_kuba.vim
 	]])
 	local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
@@ -81,7 +81,7 @@ if false then
 	]])
 else
 	vim.cmd([[ 
-		source ~/.dotfiles/nvim/hydroxy-port.vim
+		source ~/.dotfiles/nvim/themes/hydroxy-port.vim
 	]])
 	local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 	Color.new('background',  '#161616')
