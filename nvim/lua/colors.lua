@@ -1,14 +1,14 @@
 -- chaotic colorschemes
-if false then
+if true then
 	vim.cmd([[
 	source ~/.dotfiles/nvim/themes/monokai_kuba.vim
 	]])
 	local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
-	-- Color.new('background',  '#1e1e1e')
-	-- Color.new('background_lighter',  '#6f6f6f')
-	Color.new('background',  '#18191e')
-	Color.new('background_lighter', '#2f303a')
+	 Color.new('background',  '#161616')
+	 Color.new('background_lighter',  '#6f6f6f')
+	--Color.new('background',  '#18191e')
+	--Color.new('background_lighter', '#2f303a')
 	Color.new('foreground',  '#FDFDFD')
 	Color.new('red',         '#D84B82')
 	Color.new('green',       '#D3F4AF')
@@ -33,7 +33,7 @@ if false then
 	Group.new('@property', colors.foreground, nil, nil)
 	Group.new('@property.class', colors.red, nil, nil)
 	Group.new('@property.id', colors.red, nil, nil)
-	Group.new('@keyword', colors.blue, nil, nil)
+	Group.new('@keyword', colors.red, nil, nil)
 	Group.new('@variable', colors.foreground, nil , nil)
 	Group.new('@conditional', groups["@keyword"], groups["@keyword"], groups["@keyword"])
 	Group.new('@include', colors.purple, nil , nil)
@@ -74,10 +74,13 @@ if false then
 	Group.new("NvimTreeNormal", colors.foreground, nil, nil)
 	Group.new("NvimTreeFolderName", colors.foreground, nil, nil)
 
+
 	Group.new("SignColumn", nil, colors.background, nil)
 	Group.new("StatusLineNC", nil, colors.background:light(), nil)
+	--Group.new("treesittercontext", nil, colors.background, nil)
 	vim.cmd([[
 	hi Normal guibg=NONE
+	hi treesittercontext guibg=#161616
 	]])
 else
 	vim.cmd([[ 

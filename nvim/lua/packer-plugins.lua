@@ -34,6 +34,7 @@ return require("packer").startup(function()
 		run = ':TSUpdate'
 	}
 	use 'nvim-treesitter/playground'
+	use 'nvim-treesitter/nvim-treesitter-context'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
