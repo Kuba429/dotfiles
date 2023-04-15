@@ -9,7 +9,7 @@ require("lsp")
 require("colors")
 
 vim.o.ls = 0
-vim.o.ch = 0
+--vim.o.ch = 0
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
