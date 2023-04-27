@@ -20,12 +20,12 @@ require("nvim-tree").setup({
 			glyphs = {
 				folder = {
 					default = '',
-					open = '',
+					open = '',
 					symlink = '',
 				},
 			}
-		}
-
+		},
+		special_files = {},
 	},
 	filters = {
 		dotfiles = true,
@@ -36,3 +36,8 @@ require("nvim-tree").setup({
 		}
 	}
 })
+
+require'nvim-web-devicons'.setup {
+	color_icons = false;
+	default = true;
+}

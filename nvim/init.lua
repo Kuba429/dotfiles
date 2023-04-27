@@ -4,9 +4,9 @@ require("navigation")
 require("keybindings")
 require("treesitter")
 require("packer-plugins")
-require("tree")
 require("lsp")
 require("colors")
+require("tree")
 
 vim.o.ls = 0
 --vim.o.ch = 0

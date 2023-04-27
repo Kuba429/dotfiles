@@ -26,7 +26,7 @@ if true then
 	Group.new('@parameter', colors.foreground, nil , nil)
 	Group.new('@operator', colors.foreground, nil , nil)
 	Group.new('@punctuation.special', colors.foreground, nil , styles.bold)
-	Group.new('@punctuation.bracket', colors.orange, nil , nil)
+	Group.new('@punctuation.bracket', colors.foreground, nil , nil)
 	Group.new('@punctuation.delimiter', colors.foreground, nil , nil)
 	Group.new('@function.macro', colors.red, nil , styles.bold)
 	Group.new('@constructor', colors.foreground, nil, styles.bold)
@@ -70,7 +70,7 @@ if true then
 
 	Group.new("FloatBorder", nil, colors.background, nil) -- uncomment when using borders with lsp stuff
 
-	Group.new("NvimTreeCursorLine", colors.foreground, colors.background:light(), nil)
+	Group.new("NvimTreeCursorLine", nil, colors.background, nil)
 	Group.new("NvimTreeNormal", colors.foreground, nil, nil)
 	Group.new("NvimTreeFolderName", colors.foreground, nil, nil)
 
