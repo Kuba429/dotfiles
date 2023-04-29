@@ -1,15 +1,13 @@
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
-
-
 local on_attach = function(_, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	local bufopts = { noremap=true, silent=true, buffer=bufnr }
+	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
 	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -50,83 +48,91 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.s
 
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 
-	 'tsserver',
+local servers = {
+	'tsserver',
 	--'denols',
-	'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp' }
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup {
-		on_attach = on_attach,
-		lsp_flags = lsp_flags,
-		capabilities = capabilities,
-	}
-end
-
-require'lspconfig'.elixirls.setup{
-	cmd = { "/Users/kuba/.elixir-ls/language_server.sh" };
-}
-
-require'lspconfig'.sumneko_lua.setup{
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { 'vim', 'use' }
-			}
+	'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro',
+	'prismals', 'pyright', 'clangd', 'ocamllsp' }
+	for _, lsp in ipairs(servers) do
+		lspconfig[lsp].setup {
+			on_attach = on_attach,
+			lsp_flags = lsp_flags,
+			capabilities = capabilities,
 		}
-	}
-}
-
--- luasnip setup
-local luasnip = require 'luasnip'
-
--- nvim-cmp setup
-local cmp = require 'cmp'
-cmp.setup {
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		--documentation = cmp.config.window.bordered(),
-		documentation = false
-	},
-	mapping = cmp.mapping.preset.insert({
-		['<C-d>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<Tab>'] = cmp.mapping.confirm {
-			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
+	end
+	require'lspconfig'.lua_ls.setup {
+		settings = {
+			Lua = {
+				runtime = {
+					version = 'LuaJIT',
+				},
+				diagnostics = {
+					globals = {'vim'},
+				},
+				workspace = {
+					library = vim.api.nvim_get_runtime_file("", true),
+				},
+				telemetry = {
+					enable = false,
+				},
+			},
 		},
-		['<C-n>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			else
-				fallback()
-			end
-		end, { 'i', 's' }),
-		['<S-Tab>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, { 'i', 's' }),
-	}),
-	sources = {
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' },
-	},
-	formatting = {
-		fields = {"abbr", "kind"}
-	},
-	--	view = {
-		--		entries = "native"
-		--	}
 	}
+	require 'lspconfig'.elixirls.setup {
+		cmd = { "/Users/kuba/.elixir-ls/language_server.sh" },
+	}
+
+
+	-- luasnip setup
+	local luasnip = require 'luasnip'
+	-- nvim-cmp setup
+	local cmp = require 'cmp'
+	cmp.setup {
+		snippet = {
+			expand = function(args)
+				luasnip.lsp_expand(args.body)
+			end,
+		},
+		window = {
+			completion = cmp.config.window.bordered(),
+			--documentation = cmp.config.window.bordered(),
+			documentation = false
+		},
+		mapping = cmp.mapping.preset.insert({
+			['<C-d>'] = cmp.mapping.scroll_docs(-4),
+			['<C-f>'] = cmp.mapping.scroll_docs(4),
+			['<C-Space>'] = cmp.mapping.complete(),
+			['<Tab>'] = cmp.mapping.confirm {
+				behavior = cmp.ConfirmBehavior.Replace,
+				select = true,
+			},
+			['<C-n>'] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.select_next_item()
+				elseif luasnip.expand_or_jumpable() then
+					luasnip.expand_or_jump()
+				else
+					fallback()
+				end
+			end, { 'i', 's' }),
+			['<S-Tab>'] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.select_prev_item()
+				elseif luasnip.jumpable(-1) then
+					luasnip.jump(-1)
+				else
+					fallback()
+				end
+			end, { 'i', 's' }),
+		}),
+		sources = {
+			{ name = 'nvim_lsp' },
+			{ name = 'luasnip' },
+		},
+		formatting = {
+			fields = { "abbr", "kind" }
+		},
+		--	view = {
+			--		entries = "native"
+			--	}
+		}

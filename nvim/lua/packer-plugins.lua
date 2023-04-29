@@ -69,16 +69,7 @@ return require("packer").startup(function()
 	--themes
 	use 'tjdevries/colorbuddy.nvim'
 	use 'https://github.com/RRethy/nvim-base16'
-	use 'loctvl842/monokai-pro.nvim'
 	use 'AlexvZyl/nordic.nvim'
-	use({
-		'ramojus/mellifluous.nvim',
-		requires = { 'rktjmp/lush.nvim' },
-		config = function()
-			require'mellifluous'.setup({ --[[...]] }) -- optional, see configuration section.
-			vim.cmd('colorscheme mellifluous')
-		end,
-	})
 	use {
 		'meliora-theme/neovim',
 		requires = {'rktjmp/lush.nvim'}
@@ -86,8 +77,6 @@ return require("packer").startup(function()
 	use 'sainnhe/sonokai'
 	use 'Mofiqul/vscode.nvim'
 	use 'jacoborus/tender.vim'
-	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
-	use 'tanvirtin/monokai.nvim'
 	use 'folke/tokyonight.nvim'
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use { "catppuccin/nvim", as = "catppuccin" }
