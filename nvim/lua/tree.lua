@@ -67,8 +67,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'u', api.tree.change_root_to_parent, opts('Up'))
 
 end
-	require("nvim-tree").setup({
-		on_attach = on_attach,
+require("nvim-tree").setup({
+	on_attach = on_attach,
 	sort_by = "case_sensitive",
 	view = {
 		adaptive_size = true,

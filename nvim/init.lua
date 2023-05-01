@@ -1,12 +1,12 @@
 vim.opt.termguicolors = true
 require("colorizer").setup()
 require("navigation")
-require("keybindings")
 require("treesitter")
 require("packer-plugins")
 require("lsp")
 require("colors")
 require("tree")
+require("keybindings")
 
 vim.o.ls = 0
 --vim.o.ch = 0

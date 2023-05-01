@@ -63,6 +63,7 @@ return require("packer").startup(function()
 	use 'jxnblk/vim-mdx-js'
 	use 'findango/vim-mdx'
 	use 'pangloss/vim-javascript'
+	use 'ziglang/zig.vim'
 	use { 'evanleck/vim-svelte', branch= 'main' }
 	use 'fatih/vim-go'
 	use 'norcalli/nvim-colorizer.lua'
