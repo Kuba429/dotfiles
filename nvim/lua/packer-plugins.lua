@@ -56,6 +56,10 @@ return require("packer").startup(function()
 			'kyazdani42/nvim-web-devicons', -- optional, for file icons
 		}
 	}
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 	use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
 	use 'mattn/emmet-vim'
 	use 'othree/html5.vim'

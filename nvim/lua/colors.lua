@@ -5,8 +5,8 @@ if true then
 	]])
 	local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
-	 Color.new('background',  '#161616')
-	 Color.new('background_lighter',  '#6f6f6f')
+	Color.new('background',  '#161616')
+	Color.new('background_lighter',  '#6f6f6f')
 	--Color.new('background',  '#18191e')
 	--Color.new('background_lighter', '#2f303a')
 	Color.new('foreground',  '#FDFDFD')
@@ -78,6 +78,7 @@ if true then
 	Group.new("SignColumn", nil, colors.background, nil)
 	Group.new("StatusLineNC", nil, colors.background:light(), nil)
 	--Group.new("treesittercontext", nil, colors.background, nil)
+
 	vim.cmd([[
 	hi Normal guibg=NONE
 	hi treesittercontext guibg=#161616

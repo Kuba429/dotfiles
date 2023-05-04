@@ -7,9 +7,7 @@ require("lsp")
 require("colors")
 require("tree")
 require("keybindings")
-
-vim.o.ls = 0
---vim.o.ch = 0
+require("statusline")
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -30,4 +28,3 @@ vim.cmd([[
 let g:autopep8_on_save = 1
 let g:autopep8_disable_show_diff=1
 ]])
-
