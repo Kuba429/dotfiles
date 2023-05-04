@@ -1,3 +1,16 @@
+local my_colors = {
+  background         = '#121212',
+  background_lighter = '#6f6f6f',
+  foreground	     = '#FDFDFD',
+  red                = '#D84B82',
+  green              = '#D3F4AF',
+  yellow             = '#EFDC89',
+  blue               = '#ADF6ED',
+  orange             = '#DE9C8A',
+  purple             = '#BCB7E2',
+}
+
+
 -- chaotic colorschemes
 if true then
 	vim.cmd([[
@@ -5,17 +18,17 @@ if true then
 	]])
 	local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 
-	Color.new('background',  '#161616')
-	Color.new('background_lighter',  '#6f6f6f')
+	Color.new('background',  my_colors.background)
+	Color.new('background_lighter',  my_colors.background_lighter)
 	--Color.new('background',  '#18191e')
 	--Color.new('background_lighter', '#2f303a')
-	Color.new('foreground',  '#FDFDFD')
-	Color.new('red',         '#D84B82')
-	Color.new('green',       '#D3F4AF')
-	Color.new('yellow',      '#EFDC89')
-	Color.new('blue',		 '#ADF6ED')
-	Color.new('orange',		 '#DE9C8A')
-	Color.new('purple',		 '#BCB7E2')
+	Color.new('foreground',  my_colors.foreground)
+	Color.new('red',         my_colors.red)
+	Color.new('green',       my_colors.green)
+	Color.new('yellow',      my_colors.yellow)
+	Color.new('blue',		 my_colors.blue)
+	Color.new('orange',		 my_colors.orange)
+	Color.new('purple',		 my_colors.purple)
 
 	Group.new('Function', colors.green, nil, nil)
 	Group.new('@function.builtin', groups.Function, groups.Function, groups.Function)
@@ -169,3 +182,4 @@ else
 end
 
 
+return my_colors

@@ -1,16 +1,6 @@
 --vim.o.ls = 0
 --vim.o.ch = 0
-local colors = {
-  background         = '#121212',
-  background_lighter = '#6f6f6f',
-  foreground	     = '#FDFDFD',
-  red                = '#D84B82',
-  green              = '#D3F4AF',
-  yellow             = '#EFDC89',
-  blue               = '#ADF6ED',
-  orange             = '#DE9C8A',
-  purple             = '#BCB7E2',
-}
+local colors = require('colors')
 local theme = {
   normal = {
     a = {bg = nil, fg = colors.foreground, gui = 'bold'},
