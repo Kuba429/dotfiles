@@ -13,8 +13,11 @@ bufferline.setup({
 			}
 		},
 		indicator = {
+			icon = "",
 			style = "none"
 		},
-		separator_style =  "thin",
+		separator_style =  {"",""},
+		color_icons = false,
+        show_buffer_icons = false,
 	}
 })
