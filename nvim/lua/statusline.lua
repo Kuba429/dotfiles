@@ -54,7 +54,7 @@ require('lualine').setup {
     lualine_b = {'filename'},
     lualine_c = {},
     lualine_x = {},
-    lualine_y = {'branch', 'diff', 'diagnostics'},
+    lualine_y = {'branch'},
     lualine_z = {}
   },
   inactive_sections = {
