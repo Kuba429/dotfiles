@@ -83,8 +83,9 @@ require("nvim-tree").setup({
 			glyphs = {
 				folder = {
 					default = '',
-					open = '',
-					symlink = '',
+					--default = '󰉖',
+					--open = '',
+					--symlink = '',
 				},
 			}
 		},

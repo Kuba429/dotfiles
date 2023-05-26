@@ -4,16 +4,16 @@ require("navigation")
 require("treesitter")
 require("packer-plugins")
 require("lsp")
-require("colors")
-require("tree")
+require("colors") -- TODO gotta organize the colorscheme because wtf
 require("keybindings")
 require("statusline")
 require("tabs")
+require("tree")
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.scrolloff=8
+--vim.opt.scrolloff=8
 vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.wo.number = true

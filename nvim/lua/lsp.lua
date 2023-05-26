@@ -67,7 +67,7 @@ local servers = {
 					version = 'LuaJIT',
 				},
 				diagnostics = {
-					globals = {'vim'},
+					globals = {'vim', 'use'},
 				},
 				workspace = {
 					library = vim.api.nvim_get_runtime_file("", true),
@@ -126,8 +126,18 @@ local servers = {
 			end, { 'i', 's' }),
 		}),
 		sources = {
-			{ name = 'nvim_lsp' },
-			{ name = 'luasnip' },
+			{ name = 'nvim_lsp',
+			priority = 10,
+			keyword_length = 6,
+			group_index = 1,
+			max_item_count = 30,
+		},
+		{ name = 'luasnip' },
+		},
+		performance = {
+			trigger_debounce_time = 500,
+			throttle = 550,
+			fetching_timeout = 80,
 		},
 		formatting = {
 			fields = { "abbr", "kind" }

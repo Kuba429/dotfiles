@@ -14,11 +14,7 @@ return require("packer").startup(function()
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
-			require("trouble").setup {
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			}
+			require("trouble").setup { } 
 		end
 	}
 
@@ -73,8 +69,8 @@ return require("packer").startup(function()
 	use 'fatih/vim-go'
 	use 'norcalli/nvim-colorizer.lua'
 	--themes
+	use 'olivercederborg/poimandres.nvim'
 	use 'tjdevries/colorbuddy.nvim'
-	use 'https://github.com/RRethy/nvim-base16'
 	use 'AlexvZyl/nordic.nvim'
 	use {
 		'meliora-theme/neovim',
@@ -87,6 +83,8 @@ return require("packer").startup(function()
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use { "catppuccin/nvim", as = "catppuccin" }
 	use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+	use 'flrnd/plastic.vim'
+	use 'MomePP/plastic-nvim'
 end)
 
 
