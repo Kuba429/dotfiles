@@ -127,18 +127,18 @@ local servers = {
 		}),
 		sources = {
 			{ name = 'nvim_lsp',
-			priority = 10,
-			keyword_length = 6,
-			group_index = 1,
-			max_item_count = 30,
+--			priority = 10,
+--			keyword_length = 6,
+--			group_index = 1,
+--			max_item_count = 30,
 		},
 		{ name = 'luasnip' },
 		},
-		performance = {
-			trigger_debounce_time = 500,
-			throttle = 550,
-			fetching_timeout = 80,
-		},
+--		performance = {
+--			trigger_debounce_time = 500,
+--			throttle = 550,
+--			fetching_timeout = 80,
+--		},
 		formatting = {
 			fields = { "abbr", "kind" }
 		},

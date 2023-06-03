@@ -70,6 +70,7 @@ return require("packer").startup(function()
 	use 'norcalli/nvim-colorizer.lua'
 	--themes
 	use 'olivercederborg/poimandres.nvim'
+	use 'Mofiqul/dracula.nvim'
 	use 'tjdevries/colorbuddy.nvim'
 	use 'AlexvZyl/nordic.nvim'
 	use {
