@@ -11,7 +11,7 @@ local lspconfig = require('lspconfig')
 for _, lsp in ipairs( servers ) do
 	lspconfig[lsp].setup({})
 end
-
+vim.highlight.priorities.semantic_tokens = 95 -- lspconfig overwrites treesitter highlights; treesitters value is 100 so keep it under 100
 require("lspsaga").setup({
 	ui = {
 		title = true,
