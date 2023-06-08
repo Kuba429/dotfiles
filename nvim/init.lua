@@ -1,8 +1,8 @@
 vim.opt.termguicolors = true
+require("plugins")
 require("colorizer").setup()
 require("navigation")
 require("treesitter")
-require("packer-plugins")
 require("lsp")
 require("colors") -- TODO gotta organize the colorscheme because wtf
 require("keybindings")

@@ -25,6 +25,3 @@ map("n", "<C-h>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
 map("n", "<C-h>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
 map("n", "<C-h>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
 map("n", "<C-h>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
