@@ -89,6 +89,6 @@ require("lazy").setup({
 	{"catppuccin/nvim", name = 'catppuccin'},
 	'tjdevries/colorbuddy.nvim',
 	'pineapplegiant/spaceduck',
-	'oxfist/night-owl.nvim' ,
+	--'oxfist/night-owl.nvim' , -- for whatever reason this plugin overwrites visual highlight group after window loses focus; uncomment when needed
 	'tjdevries/gruvbuddy.nvim'
 })
