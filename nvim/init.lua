@@ -9,6 +9,7 @@ require("keybindings")
 require("statusline")
 require("tabs")
 require("tree")
+require("icons")
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

@@ -11,7 +11,7 @@ local lspconfig = require('lspconfig')
 for _, lsp in ipairs( servers ) do
 	lspconfig[lsp].setup({})
 end
-vim.highlight.priorities.semantic_tokens = 95 -- lspconfig overwrites treesitter highlights; treesitters value is 100 so keep it under 100
+
 require("lspsaga").setup({
 	ui = {
 		title = true,
@@ -43,6 +43,7 @@ local luasnip = require('luasnip')
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {name = 'luasnip'},
   },
   window = {
 	  completion = cmp.config.window.bordered(),
@@ -61,3 +62,9 @@ cmp.setup({
     end
   },
 })
+
+vim.highlight.priorities.semantic_tokens = 95 -- lspconfig overwrites treesitter highlights; treesitters value is 100 so keep it under 100
+vim.highlight.priorities.syntax = 96
+vim.highlight.priorities.treesitter = 99
+vim.highlight.priorities.user = 100
+

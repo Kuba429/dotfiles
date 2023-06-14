@@ -87,5 +87,8 @@ require("lazy").setup({
 	'folke/tokyonight.nvim',
 	{'rose-pine/neovim', name = 'rose-pine' },
 	{"catppuccin/nvim", name = 'catppuccin'},
-	'tjdevries/colorbuddy.nvim'
+	'tjdevries/colorbuddy.nvim',
+	'pineapplegiant/spaceduck',
+	'oxfist/night-owl.nvim' ,
+	'tjdevries/gruvbuddy.nvim'
 })

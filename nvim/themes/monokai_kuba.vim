@@ -73,4 +73,4 @@ hi StatusLine gui=bold guibg=#262830 guifg=#fdfdfd
 hi StatusLineNC gui=NONE guibg=#141519 guifg=#fdfdfd
 hi Search guibg=#4d5160 guifg=#fdfdfd
 hi VertSplit gui=NONE guifg=#262830 guibg=NONE
-hi Visual gui=NONE guibg=#262830
+hi Visual gui=NONE guibg=#ffffff guifg=#000000
