@@ -41,7 +41,7 @@ require("lazy").setup({
 	'pangloss/vim-javascript',
 	'ziglang/zig.vim',
 	{ 'evanleck/vim-svelte', branch= 'main' },
-	'fatih/vim-go',
+	--'fatih/vim-go',
 	-- EDITOR STUFF
 	{
 		"folke/which-key.nvim",
@@ -90,5 +90,6 @@ require("lazy").setup({
 	'tjdevries/colorbuddy.nvim',
 	'pineapplegiant/spaceduck',
 	--'oxfist/night-owl.nvim' , -- for whatever reason this plugin overwrites visual highlight group after window loses focus; uncomment when needed
-	'tjdevries/gruvbuddy.nvim'
+	'tjdevries/gruvbuddy.nvim',
+	"jesseleite/nvim-noirbuddy",
 })

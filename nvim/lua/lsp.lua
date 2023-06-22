@@ -1,7 +1,7 @@
 require("mason").setup()
 local servers = {
-	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls' 
-	--'denols',
+	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls',
+	'denols',
 }
 require('mason-lspconfig').setup({
 	ensure_installed = servers	
@@ -9,8 +9,20 @@ require('mason-lspconfig').setup({
 local lspconfig = require('lspconfig')
 
 for _, lsp in ipairs( servers ) do
-	lspconfig[lsp].setup({})
+	if lsp == "tsserver" then
+		lspconfig["tsserver"].setup{
+			root_dir = lspconfig.util.root_pattern("package.json"),
+			single_file_support = false
+		}
+	elseif lsp == "denols" then
+		lspconfig["denols"].setup {
+			root_dir = lspconfig.util.root_pattern("deno.jsonc"),
+		}
+	else	
+		lspconfig[lsp].setup({})
+	end
 end
+
 
 require("lspsaga").setup({
 	ui = {
@@ -36,6 +48,7 @@ keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 keymap("n", "<Leader>xx", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
+keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.format()<CR>")
 
 local cmp = require('cmp')
 local luasnip = require('luasnip')

@@ -4,12 +4,13 @@ require("colorizer").setup()
 require("navigation")
 require("treesitter")
 require("lsp")
-require("colors") -- TODO gotta organize the colorscheme because wtf
+--require("colors")
 require("keybindings")
 require("statusline")
 require("tabs")
 require("tree")
 require("icons")
+
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
