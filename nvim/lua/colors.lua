@@ -50,6 +50,9 @@ Group.new('@conditional', groups["@keyword"], groups["@keyword"], groups["@keywo
 Group.new('@include', colors.purple, nil , nil)
 Group.new('@comment', colors.background_lighter, nil , nil)
 
+--Group.new("htmlTag", colors.foreground, nil, nil)
+--Group.new("htmlTagName", colors.red, nil, nil)
+
 Group.new('@constant', colors.blue, nil, styles.bold)
 Group.new('@constant.builtin', groups["@constant"], groups["@constant"], groups["@constant"])
 
@@ -80,9 +83,9 @@ Group.new("TabLineFill", nil, colors.background:light(), nil)
 
 Group.new("FloatBorder", nil, colors.background, nil) -- uncomment when using borders with lsp stuff
 
-Group.new("NvimTreeCursorLine", nil, colors.background, nil)
-Group.new("NvimTreeNormal", colors.foreground, nil, nil)
-Group.new("NvimTreeFolderName", colors.foreground, nil, nil)
+Group.new("NvimTreeCursorLine", colors.foreground, colors.background, nil)
+Group.new("NvimTreeNormal", colors.background_lighter, nil, nil)
+Group.new("NvimTreeFolderName", colors.background_lighter, nil, nil)
 
 
 Group.new("SignColumn", nil, colors.background, nil)
