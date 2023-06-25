@@ -82,10 +82,10 @@ require("nvim-tree").setup({
 			},
 			glyphs = {
 				folder = {
-					default = '',
-					--default = '󰉖',
-					--open = '',
-					--symlink = '',
+					--default = '',
+					default = '󰉖',
+					open = '',
+					symlink = '',
 				},
 			}
 		},
