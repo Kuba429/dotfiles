@@ -17,14 +17,11 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 --vim.opt.scrolloff=8
 vim.opt.relativenumber = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.wo.number = true
 vim.cmd([[
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
 let g:vim_svelte_plugin_use_typescript = 1                                  
 let g:vim_svelte_plugin_use_sass = 1
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.jsx,*.tsx,*.astro,*.json PrettierAsync
 ]])
 
 vim.cmd([[

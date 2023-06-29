@@ -28,6 +28,6 @@ map("n", "<C-h>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
 map("n", "<C-`>", ":Lspsaga term_toggle<CR>")
 map("t", "<C-`>", "<C-\\><C-n>:q<CR>")
 
----- TODO probably should fix that: sometimes highlight group gets overwritten idk why
---vim.api.nvim_set_keymap("n", "v", ':hi Visual guibg=#6f6f6f<CR>v', {noremap = true})
---vim.api.nvim_set_keymap("n", "V", ':hi Visual guibg=#6f6f6f<CR>V', {noremap = true})
+map("n", "j", "gj")
+map("n", "k", "gk")
+

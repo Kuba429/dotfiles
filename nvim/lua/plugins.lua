@@ -78,7 +78,6 @@ require("lazy").setup({
 		dependencies = { 'kyazdani42/nvim-tree.lua', opt = true }
 	},
 	{'akinsho/bufferline.nvim',  dependencies = {'kyazdani42/nvim-web-devicons'}},
-	{ 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' },
 	'norcalli/nvim-colorizer.lua',
 	-- THEMES
 	'sainnhe/sonokai',

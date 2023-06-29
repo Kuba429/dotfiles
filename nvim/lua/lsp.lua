@@ -1,8 +1,11 @@
 require("mason").setup()
+require('null')
+
 local servers = {
 	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls',
 	'denols',
 }
+
 require('mason-lspconfig').setup({
 	ensure_installed = servers	
 })
@@ -12,7 +15,18 @@ for _, lsp in ipairs( servers ) do
 	if lsp == "tsserver" then
 		lspconfig["tsserver"].setup{
 			root_dir = lspconfig.util.root_pattern("package.json"),
-			single_file_support = false
+			single_file_support = false,
+			on_attach = function(client)
+				client.server_capabilities.documentFormattingProvider = false
+				client.server_capabilities.documentRangeFormattingProvider = false
+			end
+		}
+	elseif lsp == "volar" then
+		lspconfig["volar"].setup {
+			on_attach = function(client)
+				client.server_capabilities.documentFormattingProvider = false
+				client.server_capabilities.documentRangeFormattingProvider = false
+			end
 		}
 	elseif lsp == "denols" then
 		lspconfig["denols"].setup {
