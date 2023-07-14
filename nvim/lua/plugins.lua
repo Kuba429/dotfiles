@@ -31,6 +31,7 @@ require("lazy").setup({
 	'hrsh7th/cmp-nvim-lsp' ,              -- Completion source for LSP
 	'L3MON4D3/LuaSnip' , 
 	-- LANGUAGE STUFF
+	'jcha0713/cmp-tw2css',
 	'nvim-treesitter/playground',
 	'nvim-treesitter/nvim-treesitter-context',
 	'mattn/emmet-vim',

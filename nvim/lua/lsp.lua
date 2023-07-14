@@ -1,8 +1,7 @@
 require("mason").setup()
 require('null')
-
 local servers = {
-	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls',
+	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls', 'cssmodules_ls',
 	'denols',
 }
 
@@ -69,8 +68,9 @@ local luasnip = require('luasnip')
 
 cmp.setup({
   sources = {
-    {name = 'nvim_lsp'},
-    {name = 'luasnip'},
+	  {name = 'nvim_lsp'},
+	  {name = 'cmp-tw2css' },
+	  {name = 'luasnip'},
   },
   window = {
 	  completion = cmp.config.window.bordered(),
