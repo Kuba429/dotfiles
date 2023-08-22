@@ -11,6 +11,7 @@ require("tabs")
 require("tree")
 require("icons")
 
+
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -27,4 +28,5 @@ let g:vim_svelte_plugin_use_sass = 1
 vim.cmd([[
 let g:autopep8_on_save = 1
 let g:autopep8_disable_show_diff=1
+colorscheme srcery
 ]])

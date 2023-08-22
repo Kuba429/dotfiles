@@ -92,4 +92,12 @@ require("lazy").setup({
 	--'oxfist/night-owl.nvim' , -- for whatever reason this plugin overwrites visual highlight group after window loses focus; uncomment when needed
 	'tjdevries/gruvbuddy.nvim',
 	"jesseleite/nvim-noirbuddy",
+	'perpetuatheme/nvim',
+	'srcery-colors/srcery-vim',
+	'ofirgall/ofirkai.nvim',
+	'effkay/argonaut.vim',
+	'olivercederborg/poimandres.nvim',
+	'gregsexton/muon',
+	'kvrohit/mellow.nvim'
+
 })
