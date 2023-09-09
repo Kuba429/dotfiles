@@ -59,7 +59,6 @@ keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
 keymap({"n","v"}, "<space>ca", "<cmd>Lspsaga code_action<CR>")
 keymap("n", "<space>RN", "<cmd>Lspsaga rename ++project<CR>")
 keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>")
-keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>")
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
@@ -70,27 +69,38 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
 
 cmp.setup({
-  sources = {
-	  {name = 'nvim_lsp'},
-	  {name = 'cmp-tw2css' },
-	  {name = 'luasnip'},
-  },
-  window = {
-	  completion = cmp.config.window.bordered(),
-	  documentation = cmp.config.window.bordered()
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
-	['<C-u>'] = cmp.mapping.scroll_docs(-4),
-	['<C-d>'] = cmp.mapping.scroll_docs(4),
-	['<CR>'] = cmp.mapping.confirm({ select = true }),
-	['<tab>'] = cmp.mapping.confirm({ select = true }),
-}),
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end
-  },
+	sources = {
+		{name = 'nvim_lsp'},
+		{name = 'cmp-tw2css' },
+		{name = 'luasnip'},
+	},
+	window = {
+--		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered()
+	},
+	mapping = cmp.mapping.preset.insert({
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<C-u>'] = cmp.mapping.scroll_docs(-4),
+		['<C-d>'] = cmp.mapping.scroll_docs(4),
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
+		['<tab>'] = cmp.mapping.confirm({ select = true }),
+	}),
+	snippet = {
+		expand = function(args)
+			luasnip.lsp_expand(args.body)
+		end
+	},
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+			local strings = vim.split(kind.kind, "%s", { trimempty = true })
+			kind.kind = " " .. (strings[1] or "") .. " "
+			kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+			return kind
+		end,
+	},
 })
 
 vim.highlight.priorities.semantic_tokens = 95 -- lspconfig overwrites treesitter highlights; treesitters value is 100 so keep it under 100

@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- LSP STUFF
 	'williamboman/mason.nvim',
+	'onsails/lspkind.nvim',
 	'neovim/nvim-lspconfig',
 	'mfussenegger/nvim-dap',
 	'jose-elias-alvarez/null-ls.nvim',
