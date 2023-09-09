@@ -42,6 +42,9 @@ require("lspsaga").setup({
 		title = true,
 		border = 'rounded',
 	},
+	lightbulb = {
+		enable = false
+	},
 	beacon = {
 		enable = true
 	},

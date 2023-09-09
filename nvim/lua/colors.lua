@@ -12,7 +12,7 @@ local my_colors = {
 
 
 vim.cmd([[
-source ~/.dotfiles/nvim/themes/monokai_kuba.vim
+source ~/Documents/dev/dotfiles/nvim/themes/monokai_kuba.vim
 ]])
 local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 

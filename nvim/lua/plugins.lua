@@ -45,6 +45,13 @@ require("lazy").setup({
 	--'fatih/vim-go',
 	-- EDITOR STUFF
 	{
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
 		"folke/which-key.nvim",
 		config = function()
 			require("which-key").setup { }
@@ -57,6 +64,18 @@ require("lazy").setup({
 	},
 	{
 		'nvim-telescope/telescope.nvim' ,
+		config = function()
+			require('telescope').setup{
+				pickers = {
+					find_files = {
+						theme = "dropdown"
+					},
+					live_grep = {
+						theme = "dropdown"
+					},
+				}
+			}
+		end,
 		dependencies =  {'nvim-lua/plenary.nvim'} 
 	},
 	{ 'ibhagwan/fzf-lua', dependencies =  {'kyazdani42/nvim-web-devicons'}  },
@@ -98,6 +117,9 @@ require("lazy").setup({
 	'effkay/argonaut.vim',
 	'olivercederborg/poimandres.nvim',
 	'gregsexton/muon',
-	'kvrohit/mellow.nvim'
-
+	'kvrohit/mellow.nvim',
+	'rebelot/kanagawa.nvim',
+	'Alexis12119/nightly.nvim',
+	--'ray-x/material_plus.nvim',
+	"nyoom-engineering/oxocarbon.nvim"
 })
