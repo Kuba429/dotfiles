@@ -13,6 +13,7 @@ require("icons")
 
 vim.cmd([[
 colorscheme oxocarbon
+hi FloatBorder guifg=1a1a1a
 ]])
 
 vim.opt.mouse = 'a'

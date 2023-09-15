@@ -32,10 +32,10 @@ map("n", "<C-`>", ":Lspsaga term_toggle<CR>")
 map("t", "<C-`>", "<C-\\><C-n>:q<CR>")
 
 -- tmux compatible
-map("n", "<space>e", ":Telescope find_files<Cr>")
+map("n", "<space>f", ":Telescope find_files<Cr>")
 map("n", "<space>p", ":Telescope<Cr>")
-map("n", "<space>E", ":NvimTreeToggle<Cr>")
-map("n", "<space>f", ":Telescope live_grep<Cr>")
+map("n", "<space>e", ":NvimTreeToggle<Cr>")
+map("n", "<space>ss", ":Telescope live_grep<Cr>")
 
 map("n", "<C-t>", ":Lspsaga term_toggle<CR>")
 map("t", "<C-t>", "<C-\\><C-n>:q<CR>")
