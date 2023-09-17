@@ -46,6 +46,12 @@ require("lazy").setup({
 	--'fatih/vim-go',
 	-- EDITOR STUFF
 	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end
+	},
+	{
 		"kdheepak/lazygit.nvim",
 		-- optional for floating window border decoration
 		dependencies = {
@@ -122,5 +128,6 @@ require("lazy").setup({
 	'rebelot/kanagawa.nvim',
 	'Alexis12119/nightly.nvim',
 	--'ray-x/material_plus.nvim',
-	"nyoom-engineering/oxocarbon.nvim"
+	"nyoom-engineering/oxocarbon.nvim",
+	"Yazeed1s/oh-lucy.nvim"
 })

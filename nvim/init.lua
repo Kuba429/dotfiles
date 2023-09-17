@@ -4,17 +4,29 @@ require("colorizer").setup()
 require("navigation")
 require("treesitter")
 require("lsp")
---require("colors")
+-- require("colors")
 require("keybindings")
 require("statusline")
 require("tabs")
 require("tree")
 require("icons")
 
+-- vim.cmd([[
+-- colorscheme oxocarbon
+-- hi FloatBorder guifg=1a1a1a
+-- ]])
+
 vim.cmd([[
-colorscheme oxocarbon
-hi FloatBorder guifg=1a1a1a
+colorscheme oh-lucy
+hi NonText guifg=#1e1d22
+hi NvimTreeEndOfBuffer guifg=#1e1d22
 ]])
+
+vim.cmd([[
+NoMatchParen
+hi NvimTreeCursorLine guifg=NONE
+]])
+
 
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
