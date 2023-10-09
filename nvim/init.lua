@@ -16,15 +16,16 @@ require("icons")
 -- hi FloatBorder guifg=1a1a1a
 -- ]])
 
-vim.cmd([[
-colorscheme oh-lucy
-hi NonText guifg=#1e1d22
-hi NvimTreeEndOfBuffer guifg=#1e1d22
-]])
+--vim.cmd([[
+--colorscheme oh-lucy
+--hi NonText guifg=#1e1d22
+--hi NvimTreeEndOfBuffer guifg=#1e1d22
+--]])
 
 vim.cmd([[
 NoMatchParen
 hi NvimTreeCursorLine guifg=NONE
+set ignorecase smartcase
 ]])
 
 
@@ -35,6 +36,7 @@ vim.opt.shiftwidth = 4
 --vim.opt.scrolloff=8
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+vim.opt.smartcase = true
 vim.wo.number = true
 vim.cmd([[
 let g:vim_svelte_plugin_use_typescript = 1                                  

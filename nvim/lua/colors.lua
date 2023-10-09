@@ -1,5 +1,5 @@
 local my_colors = {
-	background         = '#121212',
+	background         = '#141519',
 	background_lighter = '#6f6f6f',
 	foreground	     = '#FDFDFD',
 	red                = '#D84B82',

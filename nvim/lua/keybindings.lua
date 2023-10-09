@@ -37,8 +37,8 @@ map("n", "<space>p", ":Telescope<Cr>")
 map("n", "<space>e", ":NvimTreeToggle<Cr>")
 map("n", "<space>ss", ":Telescope live_grep<Cr>")
 
-map("n", "<C-t>", ":Lspsaga term_toggle<CR>")
-map("t", "<C-t>", "<C-\\><C-n>:q<CR>")
+map("n", "<C-\\>", ":Lspsaga term_toggle<CR>")
+map("t", "<C-\\>", "<C-\\><C-n>:q<CR>")
 
 map("n", "j", "gj")
 map("n", "k", "gk")

@@ -1,7 +1,7 @@
 require("mason").setup()
 require('null')
 local servers = {
-	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls', 'cssmodules_ls',
+	'tsserver', 'jsonls', 'tailwindcss', 'gopls', 'svelte', 'volar', 'rust_analyzer', 'cssls', 'emmet_ls', 'astro', 'prismals', 'pyright', 'clangd', 'ocamllsp', 'zls', 'cssmodules_ls', 'elixirls',
 	'denols',
 }
 
