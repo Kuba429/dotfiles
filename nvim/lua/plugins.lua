@@ -46,6 +46,12 @@ require("lazy").setup({
 	--'fatih/vim-go',
 	-- EDITOR STUFF
 	{
+		'stevearc/oil.nvim',
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "kyazdani42/nvim-web-devicons" },
+	},
+	{
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup()

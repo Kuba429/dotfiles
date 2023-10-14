@@ -29,6 +29,7 @@ map("n", "<C-h>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
 map("n", "<C-h>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
 map("n", "<C-h>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
 map("n", "<C-`>", ":Lspsaga term_toggle<CR>")
+map("n", "-", ":Oil<CR>")
 map("t", "<C-`>", "<C-\\><C-n>:q<CR>")
 
 -- tmux compatible
