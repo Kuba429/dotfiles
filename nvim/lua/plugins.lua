@@ -52,6 +52,35 @@ require("lazy").setup({
 		dependencies = { "kyazdani42/nvim-web-devicons" },
 	},
 	{
+		"folke/persistence.nvim",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
+		opts = {
+			-- add any custom options here
+		}
+	},
+	{
+		'nvimdev/dashboard-nvim',
+		event = 'VimEnter',
+		config = function()
+			require('dashboard').setup {
+				theme = 'hyper',
+				config = {
+					week_header = {
+						enable = true,
+					},
+					shortcut = {
+						{
+							desc = ' load session',
+							group = 'Label',
+							action = 'lua require("persistence").load()',
+							key = 's',
+						},
+					}
+				}
+			}
+		end,
+	},
+	{
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup()

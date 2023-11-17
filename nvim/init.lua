@@ -10,6 +10,7 @@ require("statusline")
 require("tabs")
 require("tree")
 require("icons")
+require("files")
 
 -- vim.cmd([[
 -- colorscheme oxocarbon
