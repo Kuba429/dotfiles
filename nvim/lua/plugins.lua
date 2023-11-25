@@ -142,6 +142,9 @@ require("lazy").setup({
 	{'akinsho/bufferline.nvim',  dependencies = {'kyazdani42/nvim-web-devicons'}},
 	'norcalli/nvim-colorizer.lua',
 	-- THEMES
+	'rktjmp/lush.nvim',
+	'nocksock/bloop.nvim',
+	'def-SpaceWar/blazing.nvim',
 	'sainnhe/sonokai',
 	'Mofiqul/vscode.nvim',
 	{'rose-pine/neovim', name = 'rose-pine' },
@@ -154,5 +157,19 @@ require("lazy").setup({
 	'Alexis12119/nightly.nvim',
 	--'ray-x/material_plus.nvim',
 	"nyoom-engineering/oxocarbon.nvim",
-	"Yazeed1s/oh-lucy.nvim"
+	"Yazeed1s/oh-lucy.nvim",
+	"edluffy/hologram.nvim",
+
+
+	{
+		"epwalsh/obsidian.nvim",
+		version = "*",  -- recommended, use latest release instead of latest commit
+		lazy = true,
+		-- ft = "markdown",
+		-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+
+		},
+	}
 })

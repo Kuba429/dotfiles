@@ -56,14 +56,14 @@ require("lspsaga").setup({
 local keymap = vim.keymap.set
 
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
-keymap({"n","v"}, "<space>ca", "<cmd>Lspsaga code_action<CR>")
-keymap("n", "<space>RN", "<cmd>Lspsaga rename ++project<CR>")
-keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>")
+keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+keymap("n", "<leader>RN", "<cmd>Lspsaga rename ++project<CR>")
+keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>")
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
-keymap("n", "<Leader>xx", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
-keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.format()<CR>")
+keymap("n", "\\xx", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
+keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>")
 
 local cmp = require('cmp')
 local luasnip = require('luasnip')
@@ -75,7 +75,7 @@ cmp.setup({
 		{name = 'luasnip'},
 	},
 	window = {
---		completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered()
 	},
 	mapping = cmp.mapping.preset.insert({

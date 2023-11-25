@@ -81,6 +81,7 @@ Group.new("EndOfBuffer", groups.LineNrAbove, groups.normal, groups.normal)
 Group.new("TabLine", nil, colors.background:light(), nil)
 Group.new("TabLineFill", nil, colors.background:light(), nil)
 
+Group.new("NormalFloat", nil, colors.background, nil) -- uncomment when using borders with lsp stuff
 Group.new("FloatBorder", nil, colors.background, nil) -- uncomment when using borders with lsp stuff
 
 Group.new("NvimTreeCursorLine", colors.foreground, colors.background, nil)
@@ -90,6 +91,16 @@ Group.new("NvimTreeFolderName", colors.background_lighter, nil, nil)
 
 Group.new("SignColumn", nil, colors.background, nil)
 Group.new("StatusLineNC", nil, colors.background:light(), nil)
+
+-- markdown
+Group.new("@text.title.1.markdown", colors.red, nil, nil)
+Group.new("@text.title.2.markdown", colors.blue, nil, nil)
+Group.new("@text.title.3.markdown", colors.green, nil, nil)
+Group.new("@text.title.4.markdown", colors.purple, nil, nil)
+Group.new("@text.title.5.markdown", colors.yellow, nil, nil)
+Group.new("@text.title.6.markdown", colors.orange, nil, nil)
+Group.new("@text.strong", colors.green, nil, nil)
+Group.new("@text.emphasis", colors.blue, nil, nil)
 
 vim.cmd([[
 hi Normal guibg=NONE

@@ -1,7 +1,7 @@
 local bufferline = require("bufferline")
 bufferline.setup({
 	options={
-		mode = 'tabs',
+		mode = 'buffers',
 		style_preset = bufferline.style_preset.default,
         always_show_bufferline = false,
 		offsets = {
@@ -13,7 +13,6 @@ bufferline.setup({
 			}
 		},
 		indicator = {
-			icon = "",
 			style = "none"
 		},
 		separator_style =  {"",""},
